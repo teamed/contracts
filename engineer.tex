@@ -16,10 +16,6 @@
 \linespread{1.2}
 \usepackage{array}
 
-% comment out the next line and the document will
-% lose the watermark
-\chead{\begin{textblock}{15}(0,0)\tikz{\node [rotate=45, scale=18, text=black!10, font=\ttfamily\bfseries] at (0,0) {sample};}\end{textblock}\colorbox{black!10}{\color{red}{this is a not a real agreement, don't sign it}}}
-
 \newcommand{\engineerPrice}     {19.99}
 \newcommand{\engineerName}      {Jeff Lebowski}
 \newcommand{\engineerEmail}     {jeff.lebowski@tpc2.com}
@@ -41,6 +37,9 @@
 
 \pagestyle{fancy}
 \fancyhf{}
+% comment out the next line and the document will
+% lose the watermark
+\chead{\begin{textblock}{15}(0,0)\tikz{\node [rotate=45, scale=18, text=black!10, font=\ttfamily\bfseries] at (0,0) {sample};}\end{textblock}\colorbox{black!10}{\color{red}{this is a not a real agreement, don't sign it}}}
 \renewcommand{\headrulewidth}{0pt}
 \newcommand{\tpcTitle}{Software Engineer Agreement}
 \newcommand{\tpcAuthors}{TechnoPark Corp.}
