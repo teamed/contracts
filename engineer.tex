@@ -1,0 +1,277 @@
+%
+% Copyright (c) 2008-2014, TechnoPark Corp., Florida, USA
+% All rights reserved. THIS IS PRIVATE DOCUMENTATION.
+%
+% Redistribution and use in source and binary forms, with or without modification, are PROHIBITED
+% without prior written permission from the author. This product may NOT be used anywhere
+% and on any computer except the server platform of TechnoPark Corp. located at
+% www.technoparkcorp.com. If you received this code occacionally and without intent to use
+% it, please report this incident to the author by email: privacy@technoparkcorp.com or
+% by mail: 568 Ninth Street South 202 Naples, Florida 34102, the United States of America,
+% tel. +1 (239) 243 0206, fax +1 (239) 236-0738.
+%
+\documentclass[letterpaper,oneside,twocolumn]{article}
+\usepackage{fancyhdr,lastpage,titlesec,xtab}
+\usepackage[hyperfootnotes=true]{hyperref}
+\linespread{1.2}
+\usepackage{array}
+
+% comment out the next line and the document will
+% lose the watermark
+\chead{\begin{textblock}{15}(0,0)\tikz{\node [rotate=45, scale=18, text=black!10, font=\ttfamily\bfseries] at (0,0) {sample};}\end{textblock}\colorbox{black!10}{\color{red}{this is a not a real agreement, don't sign it}}}
+
+\newcommand{\engineerPrice}     {19.99}
+\newcommand{\engineerName}      {Jeff Lebowski}
+\newcommand{\engineerEmail}     {jeff.lebowski@tpc2.com}
+\newcommand{\engineerPhone}     {+1 212 555 6677}
+\newcommand{\engineerAddress}   {1st Street, 1}
+\newcommand{\engineerCountry}   {USA}
+
+\newcounter{parnum}
+\setcounter{parnum}{1}
+\newcommand{\N}[1]{\arabic{parnum}\refstepcounter{parnum}\label{#1}.}
+
+\usepackage{array,setspace}
+\usepackage{tikz}
+    \usetikzlibrary{arrows}
+
+\usepackage[absolute]{textpos}
+    \TPGrid{16}{16}
+\usepackage[top=2\TPVertModule, bottom=2\TPVertModule, left=2\TPHorizModule, right=2\TPHorizModule]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\tpcTitle}{TechnoPark Corp. proprietary documentation}
+\newcommand{\tpcAuthors}{TechnoPark Corp.}
+\newcommand{\tpcFileName}{engineer.pdf}
+\hypersetup{bookmarks=false, unicode=false, pdftoolbar=true, pdfmenubar=true, pdffitwindow=false, pdftitle={\tpcTitle}, pdfauthor={TechnoPark Corp., \tpcAuthors}, pdfsubject={\tpcTitle}, pdfnewwindow=true, colorlinks=true, linkcolor=black, citecolor=black, filecolor=black, urlcolor=black}
+\lfoot{
+    \begin{textblock}{12}[0,1](2,15)
+        \fontfamily{phv}\selectfont\scriptsize%
+        {
+        \begin{tabular*}{12\TPHorizModule}{@{\extracolsep{\fill}} lcr}
+        & &
+        \rule{2\TPHorizModule}{0.5pt} & Page \#\thepage{} of \pageref{LastPage} & \rule{2\TPHorizModule}{0.5pt}
+        Teamed.io, initials & (c) Copyright TechnoPark Corp. & Engineer, initials
+        \end{tabular*}}
+    \end{textblock}
+}
+
+\renewcommand\thesection{\Roman{section}}
+\titleformat{\section}
+    {\fontsize{12pt}{14pt}\bfseries\fontfamily{phv}\selectfont\raggedright}
+    {\thesection{}.}{1em}{}
+\titlespacing{\section}
+    {0em}{0em}{0em}
+\setlength{\columnsep}{\TPHorizModule}
+\renewcommand\familydefault{\sfdefault}
+\renewcommand\sfdefault{phv}
+\normalfont
+\begin{document}
+    \fontsize{12pt}{12pt}\selectfont
+    \renewcommand*\arraystretch{1.5}
+
+    \section*{Contractor Agreement}
+
+        This Agreement (``Agreement'') is made on \today, (``Effective Date''),
+        by and between \textbf{\engineerName{}} (hereafter referred to as the ``Engineer''),
+        and \textbf{TechnoPark Corp.} acting under the brand name
+        ``Teamed.io'' (hereafter referred to as ``Teamed.io''), which
+        shall collectively be known as ``Parties''.
+
+    \section{Definitions}
+
+        ``Activity'' is the smallest piece work performed by Engineer for Teamed.io.
+        Activity has a description and a budget in staff-hours.
+        Activity can refer to programming, architecture and design, analysis, technical writing,
+        system and business analysis, testing, test analysis, planning, risk management, and others,
+        according to the Engineer's knowledge, skills, abilities, and certificates.
+
+        ``Day'' and ``Daily'' mean ever calendar day, excluding Saturdays, Sundays,
+        and official holidays in the country of the Engineer's residence
+        and in the United States.
+
+        ``Confidential Information'' means any and all
+        proprietary information disclosed or made available by
+        either Party (``Discloser'') hereafter to the other Party (``Holder'') in the course of performing
+        activities, whether in written, email, instant message,
+        verbal: either by phone or in person, magnetic, photographic,
+        optical or other form and whether now existing or hereafter
+        created, including, without limitation to, all trade secrets,
+        know-how, names and contacts of employees and partners,
+        technology, data, computer programs, processes, methods,
+        operational procedures, plans, strategies or results, and other
+        information of a similar nature that is not generally disclosed
+        by the Discloser to the public.
+        Confidential Information shall not include any information which
+            (a) is proven by written evidence to have been in the Discloser's possession prior to disclosure by the Holder;
+            (b) is received from a third party having the right to disclose such information;
+            (c) is or hereafter becomes public knowledge through no act or fault of the Discloser; or
+            (d) is proven by written evidence to have been independently
+            developed by the Holder without access to the Confidential Information of the Discloser.
+
+        ``Deliverables'' mean products, services, and results developed
+        for and/or delivered to Teamed.io by the Engineer
+        during the time of this Agreement.
+
+        ``Issue Tracking System (ITS)'' is a computer software
+        that manages and maintains lists of Activities.
+
+    \section{Recitals}
+
+        \N{recitals.1} Teamed.io retains the Engineer to perform
+        Activities producing Deliverables in software development projects
+        organized and managed by Teamed.io.
+
+        \N{recitals.2} Teamed.io agrees to compensate the Engineer using
+        the method of calculation explained in this Agreement using
+        the price of \textbf{\$\engineerPrice{}} per one staff-hour.
+
+        \N{recitals.3} Agreement shall commence on the Effective Date and
+        shall remain in force until closure.
+
+    \section{Activities}
+
+        \N{order.estimate} Teamed.io shall assign Activities
+        to the Engineer in ITS, according to Teamed.io's own plans and judgement.
+        The Engineer shall implement Activities
+        according to their descriptions.
+
+        \N{order.info} Teamed.io shall provide full and complete information
+        required by the Engineer for the Activity completeness.
+        Parties agree to communicate only through
+        ITS. Any other forms of
+        communication, like Skype, phone or email, are prohibited.
+        Parties shall communicate in a professional and respectful manner.
+        Parties shall communicate only in English.
+
+        \N{order.quality} The Engineer shall develop Deliverables according
+        to the requirements, guidelines and standards provided by
+        Teamed.io before the start of the Activity.
+
+        \N{order.6} The Engineer shall perform Activities and develop
+        Deliverables using his/her own equipment and software,
+        including computers, monitors, operating systems, development tools, IDE's, etc.
+
+    \section{Activity Termination}
+
+        \N{closeout.1} Either Party may terminate an Activity.
+        Termination of any Activity does not imply closure of the Agreement.
+
+        \N{closeout.tpc} Teamed.io may terminate an Activity only if
+        its Deliverables are not approved for more
+        than 5~(five) days after the recent Activity description
+        has been provided to the Engineer.
+
+    \section{Payments}
+
+        \N{payments.main} Teamed.io shall compensate budgets of all closed Activities
+        by ``payments'' sent to the Engineer's accounts (``Payments'')
+        Teamed.io shall pay by oDesk or PayPal.
+        All payment fees are to be paid by Teamed.io.
+
+        \N{payments.1} Teamed.io shall send payments within 72 hours
+        after the moment of Activity closure.
+
+    \section{Non-Solicitation}
+
+        \N{solicitation.1} During the term of this Agreement and for 2~(two)
+        years following its termination, the Engineer will not,
+        either directly or indirectly, solicit, induce, recruit or
+        encourage any employee, customer, or supplier of Teamed.io.
+
+        \N{solicitation.2} A minimum penalty for a proven solicitation
+        is \$25,000.
+
+    \section{Agreement Closure}
+
+        \N{closure.1} Either Party may close the Agreement with or
+        without cause by sending a ``notice of closure'' to the
+        other Party. The Agreement is closed once the notice of closure
+        is received by the other Party.
+
+    \section{Intellectual Property Rights}
+
+        \N{ipr.1} Parties shall deem all Deliverables created by the Engineer
+        as ``works made for hire'' as is defined under the
+        Copyright Law of the United States of America (edition of June 2003).
+
+        \N{ipr.2} The Engineer shall transfer IPR for Deliverables to
+        Teamed.io when the Activity is closed.
+
+        \N{ipr.3} In the event that Intellectual Property is created, generated, or
+        arises under or results from the Engineer's performance under the Agreement
+        or from Confidential Information, IPR of such Intellectual Property
+        shall vest exclusively with Teamed.io.
+
+        \N{ipr.5} The Engineer shall execute all documents, and take any and all
+        actions needed, all without further consideration,
+        in order to confirm Teamed.io's rights.
+
+        \N{ipr.6} The Engineer may mention the projects done for
+        Teamed.io in his personal resume.
+
+    \section{Confidentiality}
+
+        \N{confidentiality.1} Parties shall keep Confidential Information
+        in strict confidence and shall not disclose
+        it to any third party or to the public.
+
+        \N{confidentiality.2} Teamed.io may use sales
+        materials received from the Engineer
+        in its sales and marketing campaigns,
+        including referenced customers names.
+
+        \N{confidentiality.3} A minimum penalty for a proven breach
+        of confidentiality is \$25,000.
+
+    \section{Miscellaneous}
+
+        \N{misc.2} Where the context so requires or permits, the use of the
+        singular form includes the plural, and the use of the plural
+        form includes the singular, and the use of any gender
+        includes any and all genders. Except as specifically set forth herein,
+        all the Article references are to Articles of Agreement and
+        all paragraph references (marked as \P) are to paragraphs of the Agreement.
+
+        \N{misc.3} Parentheses, capital letters, and quotation marks are
+        used merely for the sake of better understanding of context and
+        don't impact the meaning of Agreement clauses.
+
+    \section{Language and Signatures}
+
+        \N{agents.1} The Agreement is written in English
+        and both Parties understand its meaning entirely.
+
+        \N{agents.2} In witness whereof, Parties hereto have caused the Agreement
+        to be executed in the manner appropriate to each as
+        of the day and year first written above.
+
+        {\raggedright``Teamed.io's Agent''
+        {\setstretch{1.2}\fontsize{8pt}{9pt}\selectfont
+        \begin{tabular}{|p{5em}|>{\raggedright\arraybackslash}p{18em}|}
+        \hline
+        Company &       \textbf{TechnoPark Corp.} \hline
+        Full name &     Yegor Bugayenko \hline
+        Email &         yegor@tpc2.com \hline
+        Address &       568 Ninth Street South 202, Naples, Florida, 34102 \hline
+        Country &       The United States \hline
+        Phone &         +1 (860) 506 5536 \hline
+        Signature &    [5em] \hline
+        \end{tabular}}}
+
+        {\raggedright``Engineer''
+        {\setstretch{1.2}\fontsize{8pt}{9pt}\selectfont
+        \begin{tabular}{|p{5em}|>{\raggedright\arraybackslash}p{18em}|}
+        \hline
+        Full name &     \textbf{\engineerName} \hline
+        Email &         \engineerEmail \hline
+        Address &       \engineerAddress \hline
+        Country &       \engineerCountry \hline
+        Phone &         \engineerPhone \hline
+        Signature &    [5em] \hline
+        \end{tabular}}}
+
+\end{document}
+
